@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>ScreenShot Real Time</title>
     <style type="text/css">
         * {
             text-align: center;
@@ -12,6 +12,7 @@
 </head>
 <body>
     <img src="mm.jpg" alt="mm" id="img" />
+
     <script type="text/javascript">
         var imgEl = document.getElementById("img");
 
@@ -24,9 +25,12 @@
                 if (xhr.readyState === 4) {
                     if (xhr.status === 200) {
                         var src = xhr.responseText;
+
                         if(src) {
                             imgEl.src = src;
                         }
+
+                        request();
                     } else {
                         console.log("dataUrl send faild");
                     }
@@ -35,15 +39,9 @@
 
             xhr.open("GET", url, true);
             xhr.send();
-
-            setTimeout(function(){
-                request();
-            }, 100);
         }
 
-        setTimeout(function(){
-            request();
-        }, 1000);
+        request();
     </script>
 </body>
 </html>

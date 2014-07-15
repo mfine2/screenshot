@@ -1,7 +1,7 @@
 var timer = null;
 
 var allowUrl = "oracle.com";
-var interval = 300;
+var interval = 250;
 
 chrome.browserAction.onClicked.addListener(function(tab) {
     takeScreenshot();

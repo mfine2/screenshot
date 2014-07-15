@@ -4,23 +4,19 @@ var express = require("express");
 var bodyParser = require('body-parser');
 var app = express();
 
-var arr = [];
+var dataUrl = 'mm.jpg';
 
 app.use(express.static(__dirname + "/"));
-app.use(bodyParser.json({limit: 102400000}));
+app.use(bodyParser.json({limit: 10240000}));
 
 app.get("/getDataUrl/", function(req, res){
-    var dataUrl = arr.pop();
-    arr = [];
-    res.send(dataUrl || "");
+    res.send(dataUrl);
 });
 
 app.post("/setDataUrl/", function(req, res){
     //var dataUrl = req.query.dataUrl;
     //var dataUrl = req.params.dataUrl;
-    var dataUrl = req.body.dataUrl;
-    arr = [];
-    arr.push(dataUrl);
+    dataUrl = req.body.dataUrl;
     res.send("");
 });
 
