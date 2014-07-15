@@ -15,6 +15,7 @@ function sendDataUrl(dataUrl) {
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
+                console.log("dataUrl send succed");
             } else {
                 console.log("dataUrl send failed");
             }

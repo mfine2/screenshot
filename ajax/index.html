@@ -30,7 +30,9 @@
                             imgEl.src = src;
                         }
 
-                        request();
+                        setTimeout(function() {
+                            request();
+                        }, 100);
                     } else {
                         console.log("dataUrl send faild");
                     }

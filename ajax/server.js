@@ -4,7 +4,7 @@ var express = require("express");
 var bodyParser = require('body-parser');
 var app = express();
 
-var dataUrl = 'mm.jpg';
+var dataUrl = '';
 
 app.use(express.static(__dirname + "/"));
 app.use(bodyParser.json({limit: 10240000}));
