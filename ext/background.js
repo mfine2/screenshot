@@ -1,6 +1,6 @@
 var timer = null;
 
-var allowUrl = "baidu.com";
+var allowUrl = "oracle.com";
 var interval = 300;
 
 chrome.browserAction.onClicked.addListener(function(tab) {

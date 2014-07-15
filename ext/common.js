@@ -16,7 +16,7 @@ function sendDataUrl(dataUrl) {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
             } else {
-                alert("dataUrl send failed");
+                console.log("dataUrl send failed");
             }
         }
     };
